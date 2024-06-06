@@ -15,12 +15,12 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body id="page-top">
+    <body id="page-top" style="width: 100%;">
         <!-- Navigationteste-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">UNIOPEN</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 20px;">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
@@ -88,38 +88,47 @@
                     </div>
                 </div>
                 <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/tipos-de-redes.jpg" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white mb-5">Tipos de redes</h4>
-                                    <p class="mb-0 text-white-50">LAN (Local Area Network)</p>
-                                    <p class="mb-0 text-white-50">WAN (Wide Area Network)</p>
-                                    <p class="mb-0 text-white-50">MAN (Metropolitan Area Network)</p>
-                                    <p class="mb-0 text-white-50">WLAN (Wireless Local Area Network)</p>
-                                    <a class="btn btn-primary p-3 mt-5" href="#tipos-de-redes">Abrir Tópico</a>
+                <div id="topicos">
+                    <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                        <div class="col-lg-6"><img class="img-fluid" src="assets/img/tipos-de-redes.jpg" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <div class="bg-black text-center h-100 project">
+                                <div class="d-flex h-100">
+                                    <div class="project-text w-100 my-auto text-center text-lg-left">
+                                        <h4 class="text-white mb-5">Tipos de redes</h4>
+                                        <p class="mb-0 text-white-50">LAN (Local Area Network)</p>
+                                        <p class="mb-0 text-white-50">WAN (Wide Area Network)</p>
+                                        <p class="mb-0 text-white-50">MAN (Metropolitan Area Network)</p>
+                                        <p class="mb-0 text-white-50">WLAN (Wireless Local Area Network)</p>
+                                        <button class="btn btn-primary p-3 mt-5" onclick="showTextExplanation('#explicacao-tipos-de-rede', this)">Abrir Tópico</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/tecnologias-de-rede.jpg" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white mb-5">Tecnologias de rede</h4>
-                                    <p class="mb-0 text-white-50">Wi-Fi</p>
-                                    <p class="mb-0 text-white-50">Ethernet</p>
-                                    <p class="mb-0 text-white-50">Bluetooh</p>
-                                    <a class="btn btn-primary p-3 mt-5" href="#tecnologias-de-rede">Abrir Tópico</a>
+                    <div class="text-explicativo featured-text" id="explicacao-tipos-de-rede" style="display: none;">
+                        <p>Texto explicativo sobre os tipos de redes...</p>
+                    </div>
+                
+                    <!-- Project Two Row-->
+                    <div class="row gx-0 justify-content-center">
+                        <div class="col-lg-6"><img class="img-fluid" src="assets/img/tecnologias-de-rede.jpg" alt="..." /></div>
+                        <div class="col-lg-6 order-lg-first">
+                            <div class="bg-black text-center h-100 project">
+                                <div class="d-flex h-100">
+                                    <div class="project-text w-100 my-auto text-center text-lg-right">
+                                        <h4 class="text-white mb-5">Tecnologias de rede</h4>
+                                        <p class="mb-0 text-white-50">Wi-Fi</p>
+                                        <p class="mb-0 text-white-50">Ethernet</p>
+                                        <p class="mb-0 text-white-50">Bluetooth</p>
+                                        <button class="btn btn-primary p-3 mt-5" onclick="showTextExplanation('#explicacao-tecnologias-de-rede', this)">Abrir Tópico</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-explicativo featured-text" id="explicacao-tecnologias-de-rede" style="display: none;">
+                        <p>Texto explicativo sobre as tecnologias de rede...</p>
                     </div>
                 </div>
             </div>
@@ -236,5 +245,17 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            function showTextExplanation(id, button) {
+                var element = document.querySelector(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                    button.textContent = "Fechar Tópico"; // Alterando o texto do botão
+                } else {
+                    element.style.display = "none";
+                    button.textContent = "Abrir Tópico"; // Alterando o texto do botão de volta
+                }
+            }
+        </script>
     </body>
 </html>
