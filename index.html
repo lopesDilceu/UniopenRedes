@@ -11,503 +11,11 @@
     content="Jemima Abu is a self-taught Front End Developer and school-taught Systems Engineer from Lagos, Nigeria.">
   <link rel="stylesheet" href="static/css/main.css" />
   <link rel="stylesheet" href="static/css/index.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
+  <link rel="shortcut icon" href="static/images/favicon/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 
   <!-- Google fonts -->
-  <style>
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 300;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 800;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    /* cyrillic-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2JL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    }
-
-    /* cyrillic */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-    }
-
-    /* greek-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2ZL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+1F00-1FFF;
-    }
-
-    /* greek */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0370-03FF;
-    }
-
-    /* vietnamese */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa2pL7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-    }
-
-    /* latin-ext */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2) format('woff2');
-      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-    }
-
-    /* latin */
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-  </style>
+<link rel="stylesheet" href="static/css/indexPage.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3FM96129M"></script>
@@ -519,7 +27,7 @@
     gtag('config', 'G-Y3FM96129M');
   </script>
 
-  <title>Jemima Abu: Front End Developer</title>
+  <title>Uniopen Redes</title>
 </head>
 
 <body>
@@ -550,10 +58,10 @@
         O curso
       </p>
       <div class="nav-links">
-        <a href="about" class="link">about</a>
-        <a href="projects" class="link">projects</a>
-        <a href="talks" class="link">talks</a>
-        <a href="articles" class="link">articles</a>
+        <a href="#curso" class="link">Curso</a>
+        <a href="#redes" class="link">Redes</a>
+        <a href="#depoimentos" class="link">Depoimentos</a>
+        <!-- <a href="articles" class="link">articles</a> -->
         <div class="social-media">
           <a href="https://www.github.com/jemimaabu" title="Github">
             <i class="demo-icon icon-github-circled"></i>
@@ -656,28 +164,19 @@
     </div>
   </nav>
   <main>
-    <section id="about">
+    <section id="curso">
       <div class="container inner-container">
         <div class="intro scroll-in">
-          <h2 class="section-title">Curso de Sistemas de Informação <span class="title-icon">&#128578;</span></h2>
+          
+          <h2 class="section-title">Curso de Sistemas de Informação<span class="title-icon">&#128190;</span></h2>
           <div class="section-subtitle">
-            <p> A área de informática, campo no qual o bacharel em Sistemas de Informação irá atuar, é uma área em que as transformações, tanto tecnológicas como científicas, apresentam-se num ritmo muito acelerado.</p>
-            <p>
-              Para atuar na área de computação é preciso que o profissional seja interessado, esteja atento às mudanças e seja capaz de manter-se sempre atualizado em tecnologia.</p>
-            <p>
-              <!--I've <a href="talks">spoken at multiple international conferences</a> on a variety of topics
-              ranging from web accessibility to
-              career development. -->
-              Acompanhando as inovações, associando seus conhecimentos a fórmulas novas que aparecem no mercado. Deverá estar apto a desenvolver, implantar e manter sistemas de transformação.
-            </p>
-            <p><!--I also <a href="articles">write articles</a> and I have my works published on <a
-                href="https://jemimaabu.medium.com/" target="_blank" rel="noopener">Medium</a>,-->
-                É um empreendedor em atividade científica, no meio em que vive, já que, no campo da informática, as transformações tanto tecnológicas como cientificas apresentam-se num ritmo intenso.
+            <p>O curso de Sistemas de Informação da Universidade Estadual de Montes Claros - MG é uma ótima escolha para quem busca uma formação sólida na área da tecnologia. Com um corpo docente qualificado, uma boa infraestrutura e oportunidades de estágio, o curso prepara os alunos para atuar em um mercado em constante evolução, seja em empresas de tecnologia, consultorias ou empreendendo seus próprios projetos. </p>
+            <p class="section-subtitle">
+              O curso de Sistemas de Informação da Universidade Estadual de Montes Claros - MG oferece uma formação abrangente e atualizada, com disciplinas que abordam desde programação e banco de dados até segurança da informação e gestão de projetos. Com oportunidades de networking, os alunos têm acesso a experiências práticas e podem construir uma carreira de sucesso. Prepare-se para os desafios do mundo digital e faça parte desse universo em crescimento. 
             </p>
           </div>
-          <div class="section-link">
-            <a href="about" class="link-btn">More About Me</a>
-          </div>
+          
+         
         </div>
       </div>
     </section>
@@ -690,79 +189,56 @@
       </svg>
     </div>
     <section id="projects">
-      <div class="container">
+      <div class="container" id="redes">
         <div class="title-container scroll-in">
-          <h2 class="section-title">O que é Redes de Computadores? <span class="title-icon">&#128187;</span></h2>
+          <h2 class="section-title">O que são Redes de Computadores <span class="title-icon">&#128187;</span></h2>
           <p class="section-subtitle">
             São sistemas de comunicação que conectam dois ou mais computadores e dispositivos para compartilhar recursos, dados e serviços.
           </p>
+          
+          <div class="section-link">
+            <a href="#" class="link-btn">Saiba Mais</a>
+          </div>
         </div>
+        <h2 class="section-title" style="margin-top: 100px;">Carreiras em Redes de Computadores <span class="title-icon">&#128187;</span></h2>
         <div class="project-container">
           <div class="project scroll-in">
             <div class="project-image">
-              <img src="./static/images/projects/trainella.png" width="720" height="340" alt="Trainella yoga website">
+              <img src="./static/images/profissionalRedes/jovem-olhando-para-o-verificador-medio-de-fibra-optica.jpg" width="720" height="340" alt="Funções e Responsabilidades" >
             </div>
             <div class="project-content-container">
               <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://trainella.com" target="_blank" rel="noopener"> Administrador de Redes </a>
-                </h3>
+                <h3 class="project-title">Funções e Responsabilidades</h3>
                 <div class="project-description">
-                  <p>I built this project for a client after attending her yoga class. She wanted a WordPress site with
-                    a more custom layout so I used an existing WordPress theme and tweaked it with about 500 lines of
-                    additional CSS.</p>
-                  <!-- <p>
-                    One Sunday in June, I attended a free yoga class that I saw online. After the class, I got to
-                    talking
-                    with the instructor and, when I mentioned that I was a web developer, she was like "What a
-                    coincidence, I've been meaning to develop a website for my yoga classes."
-                  </p>
-                  <p>
-                    Never one to look Serendipity in the mouth, I was like "Yeah sure I can do that". The catch was: she
-                    wanted a WordPress site and I'd never actually built a WordPress site from scratch before.
-                  </p>
-                  <p>
-                    After a lot of research and bumbling and mistaking wordpress.com for wordpress.org, I finally
-                    managed
-                    to set up the site with a WordPress theme that I tweaked with about 500 lines of additional CSS to
-                    create a webpage we were both happy with.
-                  </p> -->
+                  <p><strong>Administrador de Redes:</strong> Gerencia e mantém redes locais (LAN) e redes amplas (WAN).</p>
+                  <p><strong>Engenheiro de Redes:</strong> Planeja, projeta e implementa redes de comunicação.</p>
+                  <p><strong>Especialista em Segurança de Redes:</strong> Protege redes contra ameaças e ataques cibernéticos.</p>
+                  <p><strong>Consultor de Redes:</strong> Oferece soluções e melhorias para redes corporativas.</p>
                 </div>
-                <ul class="project-tags" title="Technologies used">
+                <!-- <ul class="project-tags" title="Technologies used">
                   <li class="tag">Wordpress</li>
                   <li class="tag">CSS</li>
                   <li class="tag">HTML</li>
                 </ul>
                 <div class="project-links">
                   <a href="https://trainella.com" target="_blank" rel="noopener" class="link-btn">visit site</a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
           <div class="project scroll-in">
             <div class="project-image">
-              <img src="./static/images/projects/cybercamp.png" width="720" height="340"
-                alt="UNILAG Consult Cybercamp Website">
+              <img src="./static/images/imgRedes/tecnologias-de-rede.jpg" width="720" height="340" alt="Tecnologias e Ferramentas" >
             </div>
             <div class="project-content-container">
               <div class="project-content">
-                <h3 class="project-title">
-                  <a href="http://unilagconsult.com.ng/cybercamp" target="_blank" rel="noopener">
-                    Unilag Consult Cyber Camp
-                  </a>
-                </h3>
+                <h3 class="project-title">Tecnologias e Ferramentas</h3>
                 <div class="project-description">
-                  <p>
-                    I was contracted to build the website for the University of Lagos Consult Cyber Camp.
-                    It was a 10-page project that I worked on with a team of one other person and it took us a rather
-                    hectic two days to design and launch.
-                  </p>
-                  <!-- <p>
-                    The inspiration behind the design was something along the lines of: provide as much information as
-                    possible and be easy to navigate so we stuck to a basic layout with minimal animations.
-                  </p> -->
+                  <p><strong>Hardware de Rede:</strong> Roteadores, switches, firewalls.</p>
+                  <p><strong>Software de Gerenciamento:</strong> Ferramentas como Cisco IOS, Wireshark, Nagios.</p>
+                  <p><strong>Protocolos e Padrões:</strong> TCP/IP, Ethernet, Wi-Fi, VPN.</p>
                 </div>
-                <ul class="project-tags">
+                <!-- <ul class="project-tags">
                   <li class="tag">HTML</li>
                   <li class="tag">CSS</li>
                   <li class="tag">JavaScript</li>
@@ -770,29 +246,21 @@
                 <div class="project-links">
                   <a href="http://unilagconsult.com.ng/cybercamp" target="_blank" rel="noopener"
                     class="link-btn">Visit Site</a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
           <div class="project scroll-in">
             <div class="project-image">
-              <img src="./static/images/projects/portfolio.png" width="720" height="340"
-                alt="Jemima Abu: Self Taught Developer, School Taught Engineer">
+              <img src="./static/images/imgRedes/componentes-redes.png" width="720" height="340" alt="Tendências e Inovações">
             </div>
-            <div class="project-content-container">
+            <div class="project-content-container" >
               <div class="project-content">
-                <h3 class="project-title">
-                  My Portfolio
-                </h3>
-                <div class="project-description">
-                  <p>
-                    This is the fourth version of my portfolio website. With this version, I wanted to keep the code as
-                    basic as possible but still make the site interactive so all the animations and transitions on the
-                    page
-                    are done with vanilla JavaScript and CSS.
-                  </p>
+                <h3 class="project-title">Tendências e Inovações</h3>
+                <div class="project-description" >
+                  <p>O futuro das Redes de Computadores inclui avanços como SDN (Software-Defined Networking), IoT (Internet das Coisas), 5G, e segurança cibernética aprimorada.</p>
                 </div>
-                <ul class="project-tags">
+                <!-- <ul class="project-tags">
                   <li class="tag">HTML</li>
                   <li class="tag">CSS</li>
                   <li class="tag">JavaScript</li>
@@ -800,13 +268,13 @@
                 <div class="project-links">
                   <a href="https://github.com/jemimaabu/portfolio" target="_blank" rel="noopener" class="link-btn">View
                     Source Code</a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
         </div>
         <div class="section-link scroll-in">
-          <a href="projects" class="link-btn">View All Projects</a>
+          <a href="projects.html" class="link-btn">View All Projects</a>
         </div>
       </div>
     </section>
@@ -818,78 +286,71 @@
           style="stroke: var(--neon-color); fill: none;"></path>
       </svg>
     </div>
-    <section id="talks">
+    <section id="depoimentos">
       <div class="container">
         <div class="title-container scroll-in">
-          <h2 class="section-title">Featured Talks <span class="title-icon">&#127908;</span></h2>
-          <p class="section-subtitle">
+          <h2 class="section-title">Depoimentos e Cases de Sucesso <span class="title-icon">&#127908;</span></h2>
+          <!-- <p class="section-subtitle">
             I like to speak at tech conferences on a variety of topics ranging from web accessibility to career
             development. Here are videos from my past talks:
-          </p>
+          </p> -->
         </div>
         <div class="talks-container">
           <div class="card scroll-in">
             <div class="card-image">
-              <a href="https://www.youtube.com/watch?v=lFzWAsA76DU"
-                title="Accessible.JS - Jemima Abu - CityJS Conf 2020" target="_blank" rel="noopener">
-                <img src="./static/images/talks/accessible-js.jpeg" alt="Accessible.JS - Jemima Abu - CityJS Conf 2020"
+                <img src="./static/images/avatars/av1.jpg" alt="Avatar1"
                   width="480" height="360">
               </a>
             </div>
             <div class="card-content">
               <h3 class="card-title">
-                Accessible.JS
+                Fulano
               </h3>
               <div class="card-description">
                 <p>
-                  CityJS Conf 2020
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur tempora voluptate, sunt, odit ea neque, dolore natus veritatis culpa impedit laborum beatae! Omnis odio dolorem cumque. Tenetur, explicabo. Repellendus, ipsam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab ex quam facere? Consectetur, eveniet sint error possimus nulla architecto consequuntur natus laborum nemo ducimus, ipsam aliquam. Non, recusandae minima!
                 </p>
               </div>
             </div>
           </div>
           <div class="card scroll-in">
             <div class="card-image">
-              <a href="https://www.youtube.com/watch?v=QSXdTuD9Rak"
-                title="Understanding Accessibility as a Concept | Jemima Abu | CascadiaJS 2020" target="_blank"
-                rel="noopener">
-                <img src="./static/images/talks/understanding-accessibility.jpeg"
-                  alt="Understanding Accessibility as a Concept | Jemima Abu | CascadiaJS 2020" width="480"
-                  height="360">
+                <img src="./static/images/avatars/av2.jpg" alt="Avatar1"
+                  width="480" height="360">
               </a>
             </div>
             <div class="card-content">
               <h3 class="card-title">
-                Understanding Accessibility as a Concept
+                Colen
               </h3>
               <div class="card-description">
                 <p>
-                  CascadiaJS 2020
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur tempora voluptate, sunt, odit ea neque, dolore natus veritatis culpa impedit laborum beatae! Omnis odio dolorem cumque. Tenetur, explicabo. Repellendus, ipsam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab ex quam facere? Consectetur, eveniet sint error possimus nulla architecto consequuntur natus laborum nemo ducimus, ipsam aliquam. Non, recusandae minima!
                 </p>
               </div>
             </div>
           </div>
           <div class="card scroll-in">
             <div class="card-image">
-              <a href="https://www.youtube.com/watch?v=a0CmIEH44vg"
-                title="Jemima Abu - State Management for React Applications at React Live Conference Online"
-                target="_blank" rel="noopener">
-                <img src="./static/images/talks/state-management.jpeg"
-                  alt="Jemima Abu - State Management for React Applications at React Live Conference Online" width="480"
-                  height="360">
+                <img src="./static/images/avatars/av3.jpg" alt="Avatar1"
+                  width="480" height="360">
               </a>
             </div>
             <div class="card-content">
               <h3 class="card-title">
-                State Management for React Applications
+                Lauro
               </h3>
               <div class="card-description">
                 <p>
-                  React Live Conference Online
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur tempora voluptate, sunt, odit ea neque, dolore natus veritatis culpa impedit laborum beatae! Omnis odio dolorem cumque. Tenetur, explicabo. Repellendus, ipsam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab ex quam facere? Consectetur, eveniet sint error possimus nulla architecto consequuntur natus laborum nemo ducimus, ipsam aliquam. Non, recusandae minima!
                 </p>
               </div>
             </div>
           </div>
-          <div class="card scroll-in">
+          <!-- <div class="card scroll-in">
             <div class="card-image">
               <a href="https://www.youtube.com/watch?v=TEvxRKd2suc"
                 title="Redux Middleware for React Applications by Jemima Abu from  Telesoftas  at 84th Devclub.lv"
@@ -950,7 +411,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="section-link scroll-in">
           <a href="talks" class="link-btn">View All Talks</a>
