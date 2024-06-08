@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a324c">
+  <meta name="msapplication-navbutton-color" content="#1a324c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="static/css/main.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+  <link rel="shortcut icon" href="static/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+  <!-- Google fonts -->
+<link rel="stylesheet" href="static/css/indexPage.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3FM96129M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y3FM96129M');
+  </script>
+
+  <title>Uniopen Redes</title>
+</head>
+
+<body>
+  <header>
+    <div class="fixed-header animate-background">
+      <div class="container header-container">
+        <div class="logo-container">
+          <span class="logo animate-logo">Internet</span>
+        </div>
+        <div class="header-text">
+          <h1>
+            <p class="animate-text-1">Redes de computadores,</p>
+            <p class="animate-text-2">O que faz um profissional da área.</p>
+          </h1>
+        </div>
+        <h2 class="animate-subtitle">
+          Profissionais da área tem ganhado cada vez mais espaço no mercado de trabalho.
+        </h2>
+        <div class="scroll-button animate-scroll" tabindex="0">
+          <div class="arrow">↓</div> role
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <p class="nav-logo" title="Back to Homepage">
+        Uniopen - Redes
+      </p>
+      <div class="nav-links">
+        <a href="#curso" class="link">Curso</a>
+        <a href="#redes" class="link">Redes</a>
+        <a href="#depoimentos" class="link">Depoimentos</a>
+        <!-- <a href="articles" class="link">articles</a>
+        <div class="social-media">
+          <a href="https://www.github.com/jemimaabu" title="Github">
+            <i class="demo-icon icon-github-circled"></i>
+          </a>
+          <a href="https://www.twitter.com/jemimaabu" title="Twitter">
+            <i class="demo-icon icon-twitter"></i>
+          </a>
+          <a href="https://jemimaabu.medium.com" title="Medium">
+            <i class="demo-icon icon-medium"></i>
+          </a>
+          <a href="https://codepen.io/jemimaabu" title="Codepen">
+            <i class="demo-icon icon-codeopen"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jemimaabu" title="LinkedIn">
+            <i class="demo-icon icon-linkedin"></i>
+          </a>
+        </div> -->
+      </div>
+      <div class="nav-controls">
+        <button id="menu-display" title="Show Menu" class="hamburger"></button>
+        <button id="theme-display" title="Select a color scheme" class="control">
+          <i class="demo-icon icon-cog"></i>
+        </button>
+      </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="neon theme-select" id="neon-select" onclick="setTheme('neon')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Neon
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="curso">
+      <div class="container inner-container">
+        <div class="intro scroll-in">
+          
+          <h2 class="section-title">Curso de Sistemas de Informação<span class="title-icon">&#128190;</span></h2>
+          <div class="section-subtitle">
+            <p>O curso de Sistemas de Informação da Universidade Estadual de Montes Claros - MG é uma ótima escolha para quem busca uma formação sólida na área da tecnologia. Com um corpo docente qualificado, uma boa infraestrutura e oportunidades de estágio, o curso prepara os alunos para atuar em um mercado em constante evolução, seja em empresas de tecnologia, consultorias ou empreendendo seus próprios projetos. </p>
+            <p class="section-subtitle">
+              O curso de Sistemas de Informação da Universidade Estadual de Montes Claros - MG oferece uma formação abrangente e atualizada, com disciplinas que abordam desde programação e banco de dados até segurança da informação e gestão de projetos. Com oportunidades de networking, os alunos têm acesso a experiências práticas e podem construir uma carreira de sucesso. Prepare-se para os desafios do mundo digital e faça parte desse universo em crescimento. 
+            </p>
+          </div>
+          
+         
+        </div>
+      </div>
+    </section>
+    <div class="wave-border top">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: var(--shade-100)"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color);fill: none;"></path>
+      </svg>
+    </div>
+    <section id="projects">
+      <div class="container" id="redes">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">O que são Redes de Computadores <span class="title-icon">&#128187;</span></h2>
+          <p class="section-subtitle">
+            São sistemas de comunicação que conectam dois ou mais computadores e dispositivos para compartilhar recursos, dados e serviços.
+          </p>
+          
+          <!-- <div class="section-link">
+            <a href="#" class="link-btn">Saiba Mais</a>
+          </div> -->
+        </div>
+        <h2 class="section-title" style="margin-top: 100px;">Carreiras em Redes de Computadores <span class="title-icon">&#128187;</span></h2>
+        <div class="project-container">
+          <div class="project scroll-in">
+            <div class="project-image">
+              <img src="./static/images/profissionalRedes/jovem-olhando-para-o-verificador-medio-de-fibra-optica.jpg" width="720" height="340" alt="Funções e Responsabilidades" >
+            </div>
+            <div class="project-content-container">
+              <div class="project-content">
+                <h3 class="project-title">Funções e Responsabilidades</h3>
+                <div class="project-description">
+                  <p><strong>Administrador de Redes:</strong> Gerencia e mantém redes locais (LAN) e redes amplas (WAN).</p>
+                  <p><strong>Engenheiro de Redes:</strong> Planeja, projeta e implementa redes de comunicação.</p>
+                  <p><strong>Especialista em Segurança de Redes:</strong> Protege redes contra ameaças e ataques cibernéticos.</p>
+                  <p><strong>Consultor de Redes:</strong> Oferece soluções e melhorias para redes corporativas.</p>
+                </div>
+                <!-- <ul class="project-tags" title="Technologies used">
+                  <li class="tag">Wordpress</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">HTML</li>
+                </ul> -->
+                
+              </div>
+              <div class="parent-div" style="position: relative; height: 200px;">
+                <div class="project-links" style="position: absolute; bottom: 90px; width: 100%;">
+                  <a href="#funcoes"  class="link-btn">Saiba mais sobre funções</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project scroll-in">
+            <div class="project-image">
+              <img src="./static/images/imgRedes/tecnologias-de-rede.jpg" width="720" height="340" alt="Tecnologias e Ferramentas" >
+            </div>
+            <div class="project-content-container">
+              <div class="project-content">
+                <h3 class="project-title">Tecnologias e Ferramentas</h3>
+                <div class="project-description">
+                  <p><strong>Hardware de Rede:</strong> Roteadores, switches, firewalls.</p>
+                  <p><strong>Software de Gerenciamento:</strong> Ferramentas como Cisco IOS, Wireshark, Nagios.</p>
+                  <p><strong>Protocolos e Padrões:</strong> TCP/IP, Ethernet, Wi-Fi, VPN.</p>
+                </div>
+                <!-- <ul class="project-tags">
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">JavaScript</li>
+                </ul>-->
+                
+              </div>
+              <div class="parent-div" style="position: relative; height: 200px;">
+                <div class="project-links" style="position: absolute; bottom: 0; width: 100%;">
+                    <a href="#tecnologias" class="link-btn">Saiba mais sobre as tecnologias</a>
+                </div>
+            </div>
+            
+            </div>
+          </div>
+          <div class="project scroll-in">
+            <div class="project-image">
+              <img src="./static/images/imgRedes/componentes-redes.png" width="720" height="340" alt="Tendências e Inovações">
+            </div>
+            <div class="project-content-container" >
+              <div class="project-content">
+                <h3 class="project-title">Tendências e Inovações</h3>
+                <div class="project-description" >
+                  <p>O futuro das Redes de Computadores inclui avanços como SDN (Software-Defined Networking), IoT (Internet das Coisas), 5G, e segurança cibernética aprimorada.</p>
+                 </div>
+                <!--<ul class="project-tags">
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">JavaScript</li>
+                </ul>-->
+              </div>
+              <div class="parent-div" style="position: relative; height: 200px;">
+                <div class="project-links" style="position: absolute; bottom: 0; width: 100%;">
+                  <a href="#tendencias"  class="link-btn">Saiba mais sobre as tendências</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-border bottom">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+          style="stroke: none; fill: var(--shade-100);"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color); fill: none;"></path>
+      </svg>
+    </div>
+    <section id="funcoes">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">FUNÇÕES E RESPONSABILIDADES <span class="title-icon">&#128188;</span></h2>
+          <p class="section-subtitle">
+            Um profissional de Redes de Computadores projeta, implementa e gerencia redes, garantindo conectividade e segurança. Ele configura e mantém hardware como roteadores, monitora o desempenho, resolve problemas e implementa medidas de segurança. Além disso, deve estar atualizado com novas tecnologias para otimizar a rede.
+          </p>
+        </div>
+        <div class="articles-container">
+          <div class="article scroll-in">
+            <div class="article-image">
+                <img src="./static/images/profissionalRedes/engenheiro-de-redes.jpg"
+                  alt="Engenheiro de Redes">
+            </div>
+            <div class="article-content">
+              <!-- <p><strong>Funções: </strong> Planejar, projetar e implementar redes de comunicação. </p>
+              <p><strong>Responsabilidades: </strong> Analisar os requisitos de rede e projetar soluções de rede adequadas. <br>
+                Configurar e otimizar redes para garantir desempenho e segurança. <br>
+                Colaborar com equipes de TI para integrar soluções de rede com outros sistemas. <br>
+                Colaborar com equipes de TI para integrar soluções de rede com outros sistemas. <br>
+                Documentar a infraestrutura de rede e manter registros detalhados de configuração. </p> -->
+                <h3>Funções:</h3>
+                <ul>
+                  <li>Planejar, projetar e implementar redes de comunicação.</li>
+                </ul>
+                <h3>Responsabilidades:</h3>
+                <ul>
+                  <li>Analisar os requisitos de rede e projetar soluções de rede adequadas.</li>
+                  <li>Configurar e otimizar redes para garantir desempenho e segurança.</li>
+                  <li>Colaborar com equipes de TI para integrar soluções de rede com outros sistemas.</li>
+                  <li>Testar e implementar novas tecnologias de rede.</li>
+                  <li>Documentar a infraestrutura de rede e manter registros detalhados de configuração.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                <img src="./static/images/profissionalRedes/segurança-de-redes.jpg"
+                  alt="Especialista em Segurança de Redes">
+            </div>
+            <div class="article-content">
+              <div class="article-description">
+                <!-- <p><strong>Funções: </strong> Proteger redes contra ameaças e ataques cibernéticos. </p>
+                <p><strong>Responsabilidades: </strong> Monitorar a rede em busca de atividades suspeitas. <br>
+                  Implementar firewalls, sistemas de detecção de intrusão (IDS) e outros mecanismos de segurança. <br>
+                  Realizar auditorias de segurança e testes de penetração. <br>
+                  Desenvolver e implementar políticas de segurança e planos de resposta a incidentes. <br>
+                  Manter-se atualizado sobre as últimas ameaças e soluções de segurança. </p> -->
+                <h3>Funções:</h3>
+                <ul>
+                  <li>Proteger redes contra ameaças e ataques cibernéticos.</li>
+                </ul>
+                <h3>Responsabilidades:</h3>
+                <ul>
+                  <li>Monitorar a rede em busca de atividades suspeitas.</li>
+                  <li>Implementar firewalls, sistemas de detecção de intrusão (IDS) e outros mecanismos de segurança.</li>
+                  <li>Realizar auditorias de segurança e testes de penetração.</li>
+                  <li>Desenvolver e implementar políticas de segurança e planos de resposta a incidentes.</li>
+                  <li>Manter-se atualizado sobre as últimas ameaças e soluções de segurança.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                <img src="./static/images/profissionalRedes/consultor-de-redes.jpg"
+                  alt="Consultor de Redes">
+            </div>
+            <div class="article-content">
+              <div class="article-description">
+                <!-- <p><strong>Funções: </strong> Oferecer soluções e melhorias para redes corporativas. </p>
+                <p><strong>Responsabilidades: </strong> Avaliar a infraestrutura de rede existente e identificar áreas de melhoria. <br>
+                  Propor soluções técnicas para otimizar o desempenho e a segurança da rede. <br>
+                  Auxiliar na implementação de novas tecnologias e procedimentos de rede. <br>
+                  Treinar a equipe de TI em melhores práticas e novas tecnologias. <br>
+                  Fornecer suporte contínuo e consultoria para clientes. </p> -->
+                <h3>Funções:</h3>
+                <ul>
+                  <li>Oferecer soluções e melhorias para redes corporativas.</li>
+                </ul>
+                <h3>Responsabilidades:</h3>
+                <ul>
+                  <li>Avaliar a infraestrutura de rede existente e identificar áreas de melhoria.</li>
+                  <li>Propor soluções técnicas para otimizar o desempenho e a segurança da rede.</li>
+                  <li>Auxiliar na implementação de novas tecnologias e procedimentos de rede.</li>
+                  <li>Treinar a equipe de TI em melhores práticas e novas tecnologias.</li>
+                  <li>Fornecer suporte contínuo e consultoria para clientes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                <img src="./static/images/profissionalRedes/administrador-de-redes-fullhd.jpg"
+                  alt="Administrador de Redes">
+            </div>
+            <div class="article-content">
+              <div class="article-description">
+                <!-- <p><strong>Funções: </strong> Gerenciar e manter redes locais (LAN) e redes amplas (WAN). </p>
+                <p><strong>Responsabilidades: </strong> Configurar e manter hardware de rede (roteadores, switches, hubs). <br>
+                  Monitorar o desempenho da rede e resolver problemas de conectividade. <br>
+                  Implementar e manter políticas de segurança de rede. <br>
+                  Gerenciar usuários e recursos de rede, como servidores de arquivos e impressoras. <br>
+                  Planejar e implementar atualizações de software e hardware. </p> -->
+                <h3>Funções:</h3>
+                <ul>
+                  <li>Gerenciar e manter redes locais (LAN) e redes amplas (WAN).</li>
+                </ul>
+                <h3>Responsabilidades:</h3>
+                <ul>
+                  <li>Configurar e manter hardware de rede (roteadores, switches, hubs).</li>
+                  <li>Monitorar o desempenho da rede e resolver problemas de conectividade.</li>
+                  <li>Implementar e manter políticas de segurança de rede.</li>
+                  <li>Gerenciar usuários e recursos de rede, como servidores de arquivos e impressoras.</li>
+                  <li>Planejar e implementar atualizações de software e hardware.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-border top">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: var(--shade-100)"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color);fill: none;"></path>
+      </svg>
+    </div>
+    <section id="tecnologias">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">TECNOLOGIAS E FERRAMENTAS <span class="title-icon">&#128225;</span></h2>
+          <p class="section-subtitle">
+            As tecnologias e ferramentas na área de redes de computadores são os componentes essenciais que permitem a criação, gestão e segurança das redes de comunicação. Elas incluem tanto hardware quanto software e abrangem diversos protocolos e padrões que garantem a conectividade eficiente e segura entre dispositivos.
+          </p>
+        </div>
+        <div class="talks-container">
+          <div class="card scroll-in">
+            <div class="card-image">
+                <img src="./static/images/imgRedes/H.png" alt="Avatar1"
+                  width="480" height="360">
+              </a>
+            </div>
+            <div class="card-content">
+              <!-- <h3 class="card-title">Hardware de Rede</h3> -->
+              <div class="card-description">
+                <p><strong>Roteadores: </strong> direcionam dados entre redes usando protocolos como BGP e OSPF, com marcas famosas como Cisco e Juniper. </p>
+                <p><strong>Switches: </strong> conectam dispositivos em uma rede local, encaminhando dados com base em endereços MAC, e podem ser simples ou avançados. </p>
+                <p><strong>Firewalls: </strong> protegem a rede, controlando o tráfego de acordo com regras de segurança, com marcas como Palo Alto e Fortinet sendo populares.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card scroll-in">
+            <div class="card-image">
+                <img src="./static/images/imgRedes/soft.png" alt="Avatar1"
+                  width="480" height="360">
+              </a>
+            </div>
+            <div class="card-content">
+              <!-- <h3 class="card-title">Software de Gerenciamento</h3> -->
+              <div class="card-description">
+                <p><strong>Cisco IOS: </strong> é o sistema usado em equipamentos da Cisco para gerenciar redes com muitos recursos e configurações avançadas via linha de comando. 
+                <p><strong>Wireshark: </strong> permite capturar e analisar tráfego de rede, ajudando a resolver problemas e detectar intrusões.</p> 
+                <p><strong>Nagios: </strong> monitora a saúde e o desempenho de dispositivos e serviços de rede, enviando alertas sobre problemas e gerando relatórios detalhados.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card scroll-in">
+            <div class="card-image">
+                <img src="./static/images/imgRedes/protocols.png" alt="Avatar1"
+                  width="480" height="360">
+              </a>
+            </div>
+            <div class="card-content">
+              <!-- <h3 class="article-title">Protocolos e Padrões</h3> -->
+              <div class="card-description">
+                <p><strong>TCP/IP:</strong> é o conjunto básico de protocolos que permite a comunicação na internet e em redes locais, com TCP garantindo entrega confiável e IP gerenciando endereços.</p>
+                <p><strong>Ethernet:</strong> é a tecnologia padrão para redes locais, conectando dispositivos através de switches e oferecendo diferentes velocidades. </p>
+                <p><strong>Wi-Fi: </strong> é a tecnologia para redes sem fio, permitindo mobilidade com padrões como 802.11ac e 802.11ax. </p>
+                <p><strong>VPNs: </strong> criam conexões seguras sobre a internet, protegendo dados com protocolos como IPsec e SSL/TLS, e são usadas para conectar redes diferentes ou permitir acesso remoto seguro.</p>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-border bottom">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+          style="stroke: none; fill: var(--shade-100);"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color); fill: none;"></path>
+      </svg>
+    </div>
+    <section id="tendencias">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">TENDÊNCIAS E INOVAÇÕES <span class="title-icon">&#128223;</span></h2>
+          <p class="section-subtitle">
+            Tendências e inovações moldam o futuro das redes de computadores, melhorando a conectividade, a segurança, e a capacidade de atender às necessidades crescentes dos usuários e organizações.
+          </p>
+        </div>
+        <div class="articles-container">
+          <div class="article scroll-in">
+            <div class="article-image">
+                  <img src="./static/images/imgRedes/5g6g.png"
+                  alt="How To Learn JavaScript">
+            </div>
+            <div class="article-content">
+              <!-- <h3 class="article-title">5G e 6G</h3> -->
+              <div class="article-description">
+                <p><strong>5G:</strong> Altas velocidades e baixa latência, suportando IoT e aplicações em tempo real.</p>
+                <p><strong>6G:</strong> Futuras velocidades de terabits por segundo e latências mínimas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                  <img src="./static/images/imgRedes/IA.png"
+                  alt="How To Learn JavaScript">
+            </div>
+            <div class="article-content">
+              <!-- <h3 class="article-title">Inteligência Artificial e Machine Learning</h3> -->
+              <div class="article-description">
+                <p><strong>Segurança:</strong> Detecção de anomalias e otimização do roteamento de tráfego.</p>
+                <p><strong>Autonomia:</strong> Redes mais inteligentes e autônomas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                  <img src="./static/images/imgRedes/sdn.png"
+                  alt="How To Learn JavaScript">
+            </div>
+            <div class="article-content">
+              <!-- <h3 class="article-title">SDN E NFV</h3> -->
+              <div class="article-description">
+                <p><strong>SDN (Redes Definidas por Software):</strong> Gestão centralizada e flexível das redes.</p>
+                <p><strong>NFV (Virtualização de Funções de Rede):</strong> Virtualização de funções de rede para maior agilidade e redução de custos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                  <img src="./static/images/imgRedes/quantum.png"
+                  alt="How To Learn JavaScript">
+            </div>
+            <div class="article-content">
+              <!-- <h3 class="article-title">Quantum Networking</h3> -->
+              <div class="article-description">
+                <p><strong>Segurança: </strong> Criptografia avançada e transmissão de dados instantânea.</p>
+                <p><strong>Futuro: </strong> Comunicação entre dispositivos quânticos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                  <img src="./static/images/imgRedes/optic.png"
+                  alt="How To Learn JavaScript">
+            </div>
+            <div class="article-content">
+              <!-- <h3 class="article-title">Redes Ópticas e Fotônica</h3> -->
+              <div class="article-description">
+                  <p><strong>Velocidade: </strong> Maior largura de banda e eficiência energética com fibras ópticas.</p>
+                  <p><strong>Tecnologia:</strong> Multiplexação por divisão de comprimento de onda (WDM).</p>
+              </div>
+            </div>
+          </div>
+          <div class="article scroll-in">
+            <div class="article-image">
+                  <img src="./static/images/imgRedes/edge.png"
+                  alt="How To Learn JavaScript">
+            </div>
+            <div class="article-content">
+              <!-- <h3 class="article-title">Edge Computing</h3> -->
+              <div class="article-description">
+                <p><strong>Processamento Local: </strong> Redução da latência e carga na rede central.</p>
+                <p><strong>Aplicações: </strong> Veículos autônomos, cidades inteligentes e IoT.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="wave-border top">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: var(--shade-100)"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color);fill: none;"></path>
+      </svg>
+    </div>
+    <section id="depoimentos">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">Depoimentos e Cases de Sucesso <span class="title-icon">&#127908;</span></h2>
+          <!-- <p class="section-subtitle">
+            I like to speak at tech conferences on a variety of topics ranging from web accessibility to career
+            development. Here are videos from my past talks:
+          </p> -->
+        </div>
+        <div class="talks-container">
+          <div class="card scroll-in">
+            <div class="card-image">
+                <img src="./static/images/avatars/av1.jpg" alt="Avatar1"
+                  width="480" height="360">
+              </a>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                Fulano
+              </h3>
+              <div class="card-description">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur tempora voluptate, sunt, odit ea neque, dolore natus veritatis culpa impedit laborum beatae! Omnis odio dolorem cumque. Tenetur, explicabo. Repellendus, ipsam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab ex quam facere? Consectetur, eveniet sint error possimus nulla architecto consequuntur natus laborum nemo ducimus, ipsam aliquam. Non, recusandae minima!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card scroll-in">
+            <div class="card-image">
+                <img src="./static/images/avatars/av2.jpg" alt="Avatar1"
+                  width="480" height="360">
+              </a>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                Colen
+              </h3>
+              <div class="card-description">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur tempora voluptate, sunt, odit ea neque, dolore natus veritatis culpa impedit laborum beatae! Omnis odio dolorem cumque. Tenetur, explicabo. Repellendus, ipsam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab ex quam facere? Consectetur, eveniet sint error possimus nulla architecto consequuntur natus laborum nemo ducimus, ipsam aliquam. Non, recusandae minima!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card scroll-in">
+            <div class="card-image">
+                <img src="./static/images/avatars/av2.jpg" alt="Avatar1"
+                  width="480" height="360">
+              </a>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                Colen
+              </h3>
+              <div class="card-description">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur tempora voluptate, sunt, odit ea neque, dolore natus veritatis culpa impedit laborum beatae! Omnis odio dolorem cumque. Tenetur, explicabo. Repellendus, ipsam?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab ex quam facere? Consectetur, eveniet sint error possimus nulla architecto consequuntur natus laborum nemo ducimus, ipsam aliquam. Non, recusandae minima!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-border bottom">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+          style="stroke: none; fill: var(--shade-100);"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color); fill: none;"></path>
+      </svg>
+    </div>
+  </main>
+  <footer class="index-footer">
+    <div class="container">
+      <div class="social-media">
+        <a href="https://www.github.com/lopesDilceu" title="Github" target="_blank">
+          <i class="demo-icon icon-github-circled">lopesDilceu</i>
+        </a>
+        <a href="https://www.github.com/thiagorezendev" title="Github" target="_blank">
+          <i class="demo-icon icon-github-circled">thiagorezendev</i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="./static/js/index.js"></script>
+<script src="./static/js/landing-page.js"></script>
+
+</html>
