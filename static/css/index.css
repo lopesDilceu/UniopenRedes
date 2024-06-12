@@ -312,7 +312,9 @@ section:last-of-type .container {
 .article:hover .article-image img,
 .article:focus-within .article-image img,
 .card:hover .card-image img,
-.card:focus-within .card-image img {
+.card:focus-within .card-image img,
+.card:hover .card-avatar img,
+.card:focus-within .card-avatar {
   opacity: 1;
   filter: contrast(100%) grayscale(0);
 }
